@@ -8,5 +8,8 @@ while guess != 'q':
         print("Congratulations! You guessed the right number.")
         break
     else:
-        guess = input("Sorry, try again! Or enter q to quit. ")
+        if int(guess) > number:
+            guess = input("Sorry, your guess is too high. Try again or enter q to quit. ")
+        else:
+            guess = input("Sorry, your guess is too low. Try again or enter q to quit. ")
 
