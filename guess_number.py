@@ -10,7 +10,12 @@ while guess != 'q' and i > 1:
         break
     else:
         i -= 1
-        guess = input(f"Sorry, try again! Or enter q to quit. You have {i} attempts remaining. ")
+        if int(guess) > number:
+            guess = input(f"Sorry, your guess is too high. Try again or enter q to quit. You have {i} attempt(s) remaining. ")
+        else:
+            guess = input(f"Sorry, your guess is too low. Try again or enter q to quit. You have {i} attempt(s) remaining. ")
         if i == 1:
             print(f"You are out of attempts! The number was {number}")
         
+
+
